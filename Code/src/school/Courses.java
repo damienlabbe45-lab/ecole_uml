@@ -1,6 +1,7 @@
 package school;
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.ArrayList;
 
 
 public class Courses {
@@ -8,11 +9,13 @@ public class Courses {
     Teacher teacherCourses;
     LocalDate dateBegin;
     LocalDate dateEnd;
+    static ArrayList<Courses> listCourse = new ArrayList<>(); ;
 
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
         setNameCourse(nameCourse);
         setTeacherCourses(teacherCourses);
         setDate(dateBegin, dateEnd);
+        listCourse.add(this);
     }
 
     public void setNameCourse(String nameCourse) {
@@ -50,6 +53,14 @@ public class Courses {
     }
     public LocalDate getDateEnd() {
         return dateEnd;
+    }
+
+    public void remove(Courses cours){
+        if(listCourse.contains(cours)){
+            listCourse.remove(cours);
+        }
+        else throw new IllegalArgumentException(
+            " le cours n'existe pas");
     }
 
 }
