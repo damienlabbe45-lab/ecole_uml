@@ -1,6 +1,7 @@
 package school;
 
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 public class Director extends Users {
 
@@ -30,12 +31,12 @@ public class Director extends Users {
         students.remove(student);
     }
 
-    public Courses createCours(String nomCours, Date dateDebut, Date dateFin, Teacher teacher) {
-        return new Courses(nomCours, dateDebut, dateFin, teacher);
+    public Courses createCours(String nomCours, LocalDate dateDebut, LocalDate dateFin, Teacher teacher) {
+        return new Courses(nomCours, teacher, dateDebut, dateFin);
     }
 
-    public void modifyCours(Courses cours, String nouveauNom, Date nouvelleDateDebut,
-                            Date nouvelleDateFin, Teacher nouveauTeacher) {
+    public void modifyCours(Courses cours, String nouveauNom, LocalDate nouvelleDateDebut,
+                            LocalDate nouvelleDateFin, Teacher nouveauTeacher) {
     // a completer
     }
 
