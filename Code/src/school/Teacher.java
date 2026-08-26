@@ -11,6 +11,16 @@ public class Teacher extends Users {
 		this.adresse = adresse;
 	}
 
+	public void showOneStudent(Student student) {
+        System.out.println(student);
+    }
+
+    public void showGroupStudents(ArrayList<Student> students) {
+        for (Student student : students) {
+            showOneStudent(student);
+        }
+    }
+    
 	@Override
 	public void show_courses(ArrayList<Courses> all_courses) {
 		// TODO Auto-generated method stub
