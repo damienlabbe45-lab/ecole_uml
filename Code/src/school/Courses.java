@@ -1,5 +1,6 @@
 package school;
 import java.time.LocalDate;
+import java.util.Objects;
 
 
 public class Courses {
@@ -16,14 +17,26 @@ public class Courses {
     }
 
     public void setNameCourse(String nameCourse) {
+        Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul");
         this.nameCourse = nameCourse;
     }
 
     public void setTeacherCourses(Teacher teacherCourses) {
+        Objects.requireNonNull(teacherCourses, "l'enseignent ne peut pas être nul");
         this.teacherCourses = teacherCourses;
     }
 
-    
+    public void setDate(LocalDate dateBegin, LocalDate dateEnd) {
+        Objects.requireNonNull(dateBegin, "la date du début ne peux pas être nulle");
+        Objects.requireNonNull(dateEnd, "la date de fin ne peux pas être nulle");
+        if(dateBegin.isBefore(dateEnd)){
+        this.dateBegin = dateBegin;
+        this.dateEnd = dateEnd;
+        }
+        else throw new IllegalArgumentException(
+            "La date de fin (" + dateEnd + ") doit être au moins le lendemain de la date de début (" + dateBegin + ")."
+        );
+    }
 
     public String getNameCourse() {
         return nameCourse;
