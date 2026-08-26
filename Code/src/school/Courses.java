@@ -21,7 +21,7 @@ public class Courses {
     }
 
     public void setTeacherCourses(Teacher teacherCourses) {
-        Objects.requireNonNull(teacherCourses, "l'enseignent ne peut pas être nul");
+        Objects.requireNonNull(teacherCourses, "l'enseignant ne peut pas être nul");
         this.teacherCourses = teacherCourses;
     }
 
