@@ -26,8 +26,8 @@ public class Courses {
     }
 
     public void setDate(LocalDate dateBegin, LocalDate dateEnd) {
-        Objects.requireNonNull(dateBegin, "la date du début ne peux pas être nulle");
-        Objects.requireNonNull(dateEnd, "la date de fin ne peux pas être nulle");
+        Objects.requireNonNull(dateBegin, "la date du début ne peut pas être nulle");
+        Objects.requireNonNull(dateEnd, "la date de fin ne peut pas être nulle");
         if(dateBegin.isBefore(dateEnd)){
         this.dateBegin = dateBegin;
         this.dateEnd = dateEnd;
