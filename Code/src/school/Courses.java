@@ -12,8 +12,7 @@ public class Courses {
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
         setNameCourse(nameCourse);
         setTeacherCourses(teacherCourses);
-        this.dateBegin = dateBegin;
-        this.dateEnd = dateEnd;
+        setDate(dateBegin, dateEnd);
     }
 
     public void setNameCourse(String nameCourse) {
