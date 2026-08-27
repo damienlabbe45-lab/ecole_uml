@@ -384,5 +384,17 @@ public class test {
             System.out.println("[ÉCHEC] " + nomDuTest);
         }
     }
+
+	/**
+     * Créer une méthode qui mime les assertions traditionnelles java
+     * @param condition
+     * @param message
+     */
+	static void assertionTruePerso(boolean condition, String message) {
+        if (condition) {
+            throw new AssertionError("Test échoué " + message);
+        }
+        System.out.println("Test réussi " + message);
+    }
 	
 }
