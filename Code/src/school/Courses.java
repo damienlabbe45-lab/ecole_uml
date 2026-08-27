@@ -55,45 +55,58 @@ public class Courses {
         return dateEnd;
     }
 
-    public void remove(Courses cours){
+    public static void remove(Courses cours){
+
         if(listCourse.contains(cours))listCourse.remove(cours);
+
         else throw new IllegalArgumentException(" le cours n'existe pas");
+        
+    }
+    
+    public static void updateTeacher(Courses cours, Teacher newTeacher) {
+        Objects.requireNonNull(cours, "Le cours ne peut pas être nul");
+        Objects.requireNonNull(newTeacher, "L'enseignant ne peut pas être nul");
+    
+        if (!listCourse.contains(cours)) throw new IllegalArgumentException("Le cours n'existe pas dans la liste.");
+    
+        if (cours.getTeacherCourses().equals(newTeacher)) throw new IllegalArgumentException("Même enseignant.");
+    
+        cours.setTeacherCourses(newTeacher);
+}
+    
+
+    public static void updateNameCourse(Courses cours, String newName) {
+        Objects.requireNonNull(newName, "Le nom du cours ne peut pas être nul");
+        if (!listCourse.contains(cours)) throw new IllegalArgumentException("Le cours n'existe pas");
+        
+        if (cours.getNameCourse().equals(newName)) throw new IllegalArgumentException("Le cours porte déjà ce nom");
+        
+        cours.setNameCourse(newName);
     }
 
-    public void updateTeacher(Courses cours, Teacher teacherCourses){
-        Objects.requireNonNull(teacherCourses, "l'enseignant ne peut pas être nul");
-        if(listCourse.contains(cours)){
-            Courses courses = listCourse.get(listCourse.indexOf(cours));
-            if(!courses.teacherCourses.equals(teacherCourses))courses.teacherCourses = teacherCourses;
-            else throw new IllegalArgumentException("Vous demandez de remplacer l'enseignant par la même personne");
+    public static void updateLocalDate(Courses cours, LocalDate date, String typeDate) {
+        Objects.requireNonNull(date, "La date ne peut pas être nulle");
+        Objects.requireNonNull(typeDate, "Le type de date ne peut pas être nul");
 
-        }
-        else throw new IllegalArgumentException(" le cours n'existe pas");
-    }
+        if (!listCourse.contains(cours)) throw new IllegalArgumentException("Le cours n'existe pas");
+        
 
-    public void updateNameCourses(Courses cours, String nameCourse){
-        Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul");
-        if(listCourse.contains(cours)){
-            Courses courses = listCourse.get(listCourse.indexOf(cours));
-            if(!courses.nameCourse.equals(nameCourse))courses.nameCourse = nameCourse;
-            else throw new IllegalArgumentException("Vous demandez de remplacer l'enseignant par la même personne");
+        if ("debut".equalsIgnoreCase(typeDate)) {
 
-        }
-        else throw new IllegalArgumentException(" le cours n'existe pas");
-    }
+            if (date.isBefore(cours.getDateEnd())) cours.dateBegin = date;
 
-    public void updateLocaldate(Courses cours, LocalDate date, String typedate){
-        Objects.requireNonNull(date, "la date  ne peut pas être nulle");
-        Objects.requireNonNull(typedate, "typedate ne peut pas nulle");
-        if(listCourse.contains(cours) && (typedate.equals("debut") || typedate.equals("fin"))){
-            Courses courses = listCourse.get(listCourse.indexOf(cours));
-            if(typedate.equals("debut" ) && courses.dateEnd.isAfter(date))courses.dateBegin = date;
-            else if(typedate.equals("fin" ) && courses.dateEnd.isBefore(date))courses.dateEnd = date;
-            else throw new IllegalArgumentException("il y a un soucis avec la date");
+            else throw new IllegalArgumentException("La date de début doit être antérieure à la date de fin.");
+            
+        } 
+        
+        else if ("fin".equalsIgnoreCase(typeDate)) {
 
-        }
-        else if(listCourse.contains(cours))throw new IllegalArgumentException(" le cours existe mais vous n'avez mis ni 'debut' ni 'fin'.");
-        else throw new IllegalArgumentException(" le cours n'existe pas");
+            if (cours.getDateBegin().isBefore(date)) cours.dateEnd = date;
+
+            else throw new IllegalArgumentException("La date de fin doit être postérieure à la date de début.");
+            
+        } else throw new IllegalArgumentException("Le cours existe mais vous n'avez mis ni 'debut' ni 'fin'.");
+        
     }
 
 }
