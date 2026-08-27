@@ -1,9 +1,6 @@
 package school;
 
 import java.util.HashMap;
-import java.util.random.RandomGenerator.LeapableGenerator;
-
-import org.w3c.dom.css.ElementCSSInlineStyle;
 
 public class Adresse {
   	/**
@@ -110,7 +107,7 @@ public class Adresse {
 	 * et l'éloignement du domicile de l'élève de l'école
 	 * @return le message à afficher
 	 */
-	public String adressDisplayInformations() {
+	public String addressDisplayInformations() {
 		String messageString = "";
 		if (!street.equalsIgnoreCase("unknown")){
 			messageString += street + ", ";			
@@ -121,13 +118,46 @@ public class Adresse {
 		}
 		
 		messageString += city;		
-		messageString += " est à " + String.valueOf(calculateSchoolDistance()) + "Km de l'école";
+		messageString += " est à " + String.valueOf(calculateSchoolDistance()) + " Km de l'école";
 
 		return messageString;
 	}
 
 	@Override
 	public String toString() {
-		return adressDisplayInformations();
+		return addressDisplayInformations();
 	}
+	
+	public HashMap<String, Integer> getDistances() {
+		return distances;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public int getCodePostal() {
+		return codePostal;
+	}
+
+	public void setDistances(HashMap<String, Integer> distances) {
+		this.distances = distances;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public void setCodePostal(int codePostal) {
+		this.codePostal = codePostal;
+	}
+	
 }
