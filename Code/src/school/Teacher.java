@@ -23,8 +23,11 @@ public class Teacher extends Users {
     
 	@Override
 	public void show_courses(ArrayList<Courses> all_courses) {
-		// TODO Auto-generated method stub
-		
+		for (Courses courses : all_courses) {
+			if (courses.getTeacherCourses() == this) {
+                System.out.println(courses);
+            }
+		}	
 	}
 
 }

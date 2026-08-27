@@ -10,8 +10,10 @@ public class Director extends Users {
 	}
 
 	@Override
-	public void show_courses(ArrayList all_courses) {
-		
+	public void show_courses(ArrayList<Courses> all_courses) {
+		for (Courses courses : all_courses) {
+			System.out.println(courses);
+		}
 	}
 	
 	public Teacher create_teacher(int id, String Name, String Surname,  Adresse adresse) {
