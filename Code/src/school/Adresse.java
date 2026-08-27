@@ -24,4 +24,13 @@ public class Adresse {
 		this.codePostal = codePostal;
 	}
 
+	/**
+	 * Constructeur minimal de la classe avec le seul paramètre obligatoire
+	 * @param city
+	 */
+	public Adresse(String city) {
+		distances.put("toulouse", 0);
+		this.city = city;
+	}
+
 }
