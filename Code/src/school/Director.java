@@ -23,7 +23,7 @@ public class Director extends Users {
         teachers.remove(teacher);
     }
 
-    public Student createStudent(int id, String name, String surname, Addresse address) {
+    public Student createStudent(int id, String name, String surname, Adresse address) {
         return new Student(id, name, surname, address);
     }
 
@@ -43,9 +43,5 @@ public class Director extends Users {
     public void deleteCours(ArrayList<Courses> courses, Courses cours) {
         courses.remove(cours);
     }
-	
-	public Student create_student(Users users, Adresse adresse) {
-		
-	}
 
 }

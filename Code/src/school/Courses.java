@@ -72,7 +72,7 @@ public class Courses {
     }
 
     public void updateNameCourses(Courses cours, String nameCourse){
-        Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul")
+        Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul");
         if(listCourse.contains(cours)){
             Courses courses = listCourse.get(listCourse.indexOf(cours));
             if(!courses.nameCourse.equals(nameCourse))courses.nameCourse = nameCourse;
