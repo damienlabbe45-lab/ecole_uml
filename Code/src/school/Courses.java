@@ -24,6 +24,8 @@ public class Courses {
     /** Registre global de l'ensemble des cours créés. sert juste à simuler une table de base de donnée */
     static ArrayList<Courses> listCourse = new ArrayList<>();
 
+    final ArrayList<Student> = new ArrayList<>();
+
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
         /**
      * Crée un nouveau cours et l'ajoute automatiquement au registre global.
@@ -187,5 +189,32 @@ public class Courses {
         return "Le cours " + nameCourse + " est enseigné par " + teacherCourses.getName() + " " + teacherCourses.getSurname() + 
         ". Il commence du " + dateBegin + " jusqu'au " + dateEnd + ".";
     }
+
+    public static void allcoursesTeacher(Teacher teacher){
+        for(Courses course: listCourse){
+            if(course.getTeacherCourses.equalsIgnoreCase(teacher))System.out.println(course);
+        }
+    }
+
+    public void addStudent(Student student) {
+        /**
+         * Inscrit un étudiant au cours.
+         */
+    Objects.requireNonNull(student, "L'étudiant ne peut pas être nul");
+    if (!this.students.contains(student)) this.students.add(student);
+    }
+
+    public boolean removeStudent(Student student) {
+        /**
+         * Désinscrit un étudiant du cours.
+         */
+        return this.students.remove(student);
+
+        }
+
+    public ArrayList<Student> getStudents(){
+        return this.students;
+    }
+
 
 }
