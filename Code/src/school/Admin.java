@@ -13,8 +13,8 @@ public class Admin extends Users {
     * Crée un nouveau admin
     *
     * @param id     l'identifiant de l'admin
-    * @param teacherCourses le prénom de l'admin
-    * @param dateBegin      le nom de l'admin
+    * @param name le prénom de l'admin
+    * @param surname      le nom de l'admin
     */
 	public Admin(int id, String name, String surname) {
 		super(id, name, surname);
@@ -35,9 +35,7 @@ public class Admin extends Users {
 	/**
     * Crée un nouveau directeur
     *
-    * @param id     l'identifiant du directeur
-    * @param teacherCourses le prénom du directeur
-    * @param dateBegin      le nom du directeur
+    * @param User     ll'utilisateur qui sera directeur
 	* @return Director (retourne le directeur)
     */
 	public Director create_director(Users user) {
