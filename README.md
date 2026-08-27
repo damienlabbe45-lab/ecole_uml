@@ -3,7 +3,7 @@
 ## [0.0.1] - 2026-08-25
 
 > Projet pédagogique pour apprentissage de l'UML. A partir
-des diagrammes essentiels UML aller jusqu'au codage en java.
+des diagrammes essentiels UML aller jusqu'au codage en java 8.
 
 ## Contributeurs 
 
