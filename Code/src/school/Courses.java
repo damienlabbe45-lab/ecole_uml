@@ -9,7 +9,7 @@ public class Courses {
     Teacher teacherCourses;
     LocalDate dateBegin;
     LocalDate dateEnd;
-    static ArrayList<Courses> listCourse = new ArrayList<>(); ;
+    static ArrayList<Courses> listCourse = new ArrayList<>();
 
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
         setNameCourse(nameCourse);
@@ -56,11 +56,18 @@ public class Courses {
     }
 
     public void remove(Courses cours){
+        if(listCourse.contains(cours))listCourse.remove(cours);
+        else throw new IllegalArgumentException(" le cours n'existe pas");
+    }
+
+    public void updateTeacher(Courses cours, Teacher teacherCourses){
         if(listCourse.contains(cours)){
-            listCourse.remove(cours);
+            Courses courses = listCourse.get(listCourse.indexOf(cours));
+            if(!courses.teacherCourses.equals(teacherCourses))courses.teacherCourses = teacherCourses;
+            else throw new IllegalArgumentException("Vous demandez de remplacer l'enseignant par la même personne");
+
         }
-        else throw new IllegalArgumentException(
-            " le cours n'existe pas");
+        else throw new IllegalArgumentException(" le cours n'existe pas");
     }
 
 }
