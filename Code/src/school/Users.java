@@ -33,5 +33,11 @@ public abstract class Users {
 	}
 	
 	public abstract void show_courses(ArrayList<Courses> all_courses);
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", name=" + name + ", surname=" + surname + "]";
+	}
+	
+	
 
 }
