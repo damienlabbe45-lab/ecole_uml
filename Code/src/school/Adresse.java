@@ -33,4 +33,16 @@ public class Adresse {
 		this.city = city;
 	}
 
+	public Adresse(String city, int codePostal) {
+		distances.put("toulouse", 0);
+		this.city = city;
+		this.codePostal = codePostal;
+	}
+	
+	public Adresse(String street, String city) {
+		distances.put("toulouse", 0);
+		this.street = street;
+		this.city = city;
+	}
+
 }
