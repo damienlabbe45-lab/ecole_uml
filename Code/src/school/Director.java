@@ -14,8 +14,8 @@ public class Director extends Users {
 		
 	}
 	
-	public Teacher create_teacher(Users user, Adresse adresse) {
-		Teacher teacher = new Teacher(user.getId(), user.getName(), user.getSurname(), adresse);
+	public Teacher create_teacher(int id, String Name, String Surname,  Adresse adresse) {
+		Teacher teacher = new Teacher(id, Name, Surname, adresse);
 		return teacher;
 	}
 	
