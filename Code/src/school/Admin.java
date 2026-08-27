@@ -16,8 +16,7 @@ public class Admin extends Users {
 	}
 	
 	public Director create_director(Users user) {
-		Director director = new Director(user.getId(), user.getName(), user.getSurname());
-		return director;
+		return new Director(user.getId(), user.getName(), user.getSurname());
 	}
 	
 }
