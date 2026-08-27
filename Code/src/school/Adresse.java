@@ -92,4 +92,14 @@ public class Adresse {
 	    distances.put("pamiers", 75);
 	}
 
+	/**
+	 * Méthode de calcul des distances entre le domicile de l'élève et
+	 * l'école supposée à toulouse
+	 * @return la distance sous forme d'entier
+	 */
+	public int calculateSchoolDistance() {		
+		
+		return distances.get(city.toLowerCase());
+	}
+
 }
