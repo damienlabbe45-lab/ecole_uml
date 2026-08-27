@@ -192,7 +192,9 @@ public class Courses {
 
     public static void allcoursesTeacher(Teacher teacher){
         for(Courses course: listCourse){
-            if(course.getTeacherCourses.equalsIgnoreCase(teacher))System.out.println(course);
+            if(course.getTeacherCourses() == teacher) {
+            	System.out.println(course);
+            }
         }
     }
 
