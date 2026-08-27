@@ -70,4 +70,26 @@ public class Courses {
         else throw new IllegalArgumentException(" le cours n'existe pas");
     }
 
+    public void updateNameCourses(Courses cours, String nameCourse){
+        if(listCourse.contains(cours)){
+            Courses courses = listCourse.get(listCourse.indexOf(cours));
+            if(!courses.nameCourse.equals(nameCourse))courses.nameCourse = nameCourse;
+            else throw new IllegalArgumentException("Vous demandez de remplacer l'enseignant par la même personne");
+
+        }
+        else throw new IllegalArgumentException(" le cours n'existe pas");
+    }
+
+    public void updateLocaldate(Courses cours, LocalDate date, String typedate){
+        if(listCourse.contains(cours) && (typedate.equals("debut") || typedate.equals("fin"))){
+            Courses courses = listCourse.get(listCourse.indexOf(cours));
+            if(typedate.equals("debut" ) && courses.dateEnd.isAfter(date))courses.dateBegin = date;
+            else if(typedate.equals("fin" ) && courses.dateEnd.isBefore(date))courses.dateEnd = date;
+            else throw new IllegalArgumentException("il y a un soucis avec la date");
+
+        }
+        else if(listCourse.contains(cours))throw new IllegalArgumentException(" le cours existe mais vous n'avez mis ni 'debut' ni 'fin'.");
+        else throw new IllegalArgumentException(" le cours n'existe pas");
+    }
+
 }
