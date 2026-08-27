@@ -3,15 +3,38 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.ArrayList;
 
+/**
+ * Représente un cours dispensé par un enseignant sur une période donnée.
+ * Cette classe maintient également une liste globale de tous les cours instanciés.
+ * 
+ * @version 1.0
+ */
+
 
 public class Courses {
+    /** Nom du cours. */
     String nameCourse;
+
+    /** Enseignant responsable du cours. */
     Teacher teacherCourses;
+    /** Date de début du cours. */
     LocalDate dateBegin;
+    /** Date de fin du cours. */
     LocalDate dateEnd;
+    /** Registre global de l'ensemble des cours créés. sert juste à simuler une table de base de donnée */
     static ArrayList<Courses> listCourse = new ArrayList<>();
 
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
+        /**
+     * Crée un nouveau cours et l'ajoute automatiquement au registre global.
+     *
+     * @param nameCourse     le nom du cours (ne doit pas être null)
+     * @param teacherCourses l'enseignant responsable (ne doit pas être null)
+     * @param dateBegin      la date de début (ne doit pas être null)
+     * @param dateEnd        la date de fin (doit être au moins le lendemain de dateBegin)
+     * @throws NullPointerException     si l'un des arguments est null
+     * @throws IllegalArgumentException si dateBegin n'est pas strictement antérieure à dateEnd
+     */
         setNameCourse(nameCourse);
         setTeacherCourses(teacherCourses);
         setDate(dateBegin, dateEnd);
@@ -19,16 +42,36 @@ public class Courses {
     }
 
     public void setNameCourse(String nameCourse) {
+        /**
+     * Modifie le nom du cours.
+     *
+     * @param nameCourse le nouveau nom
+     * @throws NullPointerException si nameCourse est null
+     */
         Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul");
         this.nameCourse = nameCourse;
     }
 
     public void setTeacherCourses(Teacher teacherCourses) {
+        /**
+     * Modifie l'enseignant du cours.
+     *
+     * @param teacherCourses le nouvel enseignant
+     * @throws NullPointerException si teacherCourses est null
+     */
         Objects.requireNonNull(teacherCourses, "l'enseignant ne peut pas être nul");
         this.teacherCourses = teacherCourses;
     }
 
     public void setDate(LocalDate dateBegin, LocalDate dateEnd) {
+        /**
+     * Définit et valide les dates de début et de fin du cours.
+     *
+     * @param dateBegin la date de début
+     * @param dateEnd   la date de fin
+     * @throws NullPointerException     si l'une des dates est null
+     * @throws IllegalArgumentException si la date de fin n'est pas postérieure à la date de début
+     */
         Objects.requireNonNull(dateBegin, "la date du début ne peut pas être nulle");
         Objects.requireNonNull(dateEnd, "la date de fin ne peut pas être nulle");
         if(dateBegin.isBefore(dateEnd)){
@@ -56,7 +99,12 @@ public class Courses {
     }
 
     public static void remove(Courses cours){
-
+        /**
+     * Supprime un cours de la liste globale.
+     *
+     * @param cours le cours à retirer
+     * @throws IllegalArgumentException si le cours n'existe pas dans le registre
+     */
         if(listCourse.contains(cours))listCourse.remove(cours);
 
         else throw new IllegalArgumentException(" le cours n'existe pas");
@@ -64,6 +112,14 @@ public class Courses {
     }
     
     public static void updateTeacher(Courses cours, Teacher newTeacher) {
+        /**
+     * Mettre à jour l'enseignant d'un cours existant.
+     *
+     * @param cours      le cours concerné
+     * @param newTeacher le nouvel enseignant
+     * @throws NullPointerException     si cours ou newTeacher est null
+     * @throws IllegalArgumentException si le cours n'est pas dans la liste ou si l'enseignant est identique
+     */
         Objects.requireNonNull(cours, "Le cours ne peut pas être nul");
         Objects.requireNonNull(newTeacher, "L'enseignant ne peut pas être nul");
     
@@ -76,6 +132,14 @@ public class Courses {
     
 
     public static void updateNameCourse(Courses cours, String newName) {
+        /**
+     * Mettre à jour le nom d'un cours existant.
+     *
+     * @param cours   le cours concerné
+     * @param newName le nouveau nom
+     * @throws NullPointerException     si newName est null
+     * @throws IllegalArgumentException si le cours n'est pas dans la liste ou si le nom est identique
+     */
         Objects.requireNonNull(newName, "Le nom du cours ne peut pas être nul");
         if (!listCourse.contains(cours)) throw new IllegalArgumentException("Le cours n'existe pas");
         
@@ -85,6 +149,15 @@ public class Courses {
     }
 
     public static void updateLocalDate(Courses cours, LocalDate date, String typeDate) {
+        /**
+     * Mettre à jour une date (début ou fin) pour un cours existant.
+     *
+     * @param cours    le cours concerné
+     * @param date     la nouvelle date
+     * @param typeDate le type de date à modifier ("debut" ou "fin")
+     * @throws NullPointerException     si date ou typeDate est null
+     * @throws IllegalArgumentException si le cours n'existe pas, si typeDate est invalide ou si la cohérence des dates n'est pas respectée
+     */
         Objects.requireNonNull(date, "La date ne peut pas être nulle");
         Objects.requireNonNull(typeDate, "Le type de date ne peut pas être nul");
 
@@ -114,7 +187,5 @@ public class Courses {
         return "Le cours " + nameCourse + " est enseigné par " + teacherCourses + ". Il commence du " + dateBegin
                 + " jusqu'au " + dateEnd + ".";
     }
-
-    
 
 }
