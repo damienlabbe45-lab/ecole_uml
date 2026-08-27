@@ -215,7 +215,7 @@ public class Courses {
         }
 
     public ArrayList<Student> getStudents(){
-        return this.students;
+        return new ArrayList<>(this.students);
     }
 
 
