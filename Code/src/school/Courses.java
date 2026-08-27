@@ -184,8 +184,8 @@ public class Courses {
 
     @Override
     public String toString() {
-        return "Le cours " + nameCourse + " est enseigné par " + teacherCourses + ". Il commence du " + dateBegin
-                + " jusqu'au " + dateEnd + ".";
+        return "Le cours " + nameCourse + " est enseigné par " + teacherCourses.getName() + " " + teacherCourses.getSurname() + 
+        ". Il commence du " + dateBegin + " jusqu'au " + dateEnd + ".";
     }
 
 }
