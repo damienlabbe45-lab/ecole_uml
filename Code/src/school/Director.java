@@ -17,8 +17,7 @@ public class Director extends Users {
 	}
 	
 	public Teacher create_teacher(int id, String Name, String Surname,  Adresse adresse) {
-		Teacher teacher = new Teacher(id, Name, Surname, adresse);
-		return teacher;
+		return new Teacher(id, Name, Surname, adresse);
 	}
 	
 	public void deleteTeacher(ArrayList<Teacher> teachers, Teacher teacher) {
