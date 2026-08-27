@@ -33,7 +33,7 @@ public class Admin extends Users {
 	}
 
 	/**
-    * Crée un nouveau admin
+    * Crée un nouveau directeur
     *
     * @param id     l'identifiant du directeur
     * @param teacherCourses le prénom du directeur
