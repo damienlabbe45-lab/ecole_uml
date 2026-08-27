@@ -2,7 +2,10 @@ package school;
 
 import java.util.HashMap;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 537bcce77b827d79254ec4b3db1993cd06313cb8
 public class Authentification {
 	HashMap <String, String> loginPassword = new HashMap<String, String>();
 	private String login = "Any";
@@ -54,7 +57,17 @@ public class Authentification {
 	}
 	
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		
+=======
+		Authentification test = new Authentification();
+		test.addLogin("toto", "titi");
+		String messageString = "Authentification a échouée\nMauvais identifiant ou mauvais mot de passe !";
+		if (test.verifyAuthentification("toto", "titi")) {
+			messageString = "Authentification réussie !";
+		}
+		System.out.println(messageString);	
+>>>>>>> 537bcce77b827d79254ec4b3db1993cd06313cb8
 	}	
 
 }
