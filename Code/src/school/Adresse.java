@@ -1,6 +1,9 @@
 package school;
 
 import java.util.HashMap;
+import java.util.random.RandomGenerator.LeapableGenerator;
+
+import org.w3c.dom.css.ElementCSSInlineStyle;
 
 public class Adresse {
   	/**
@@ -101,5 +104,30 @@ public class Adresse {
 		
 		return distances.get(city.toLowerCase());
 	}
+	
+	/**
+	 * Méthode pour afficher les informations de l'adresse
+	 * et l'éloignement du domicile de l'élève de l'école
+	 * @return le message à afficher
+	 */
+	public String adressDisplayInformations() {
+		String messageString = "";
+		if (!street.equalsIgnoreCase("unknown")){
+			messageString += street + ", ";			
+		}
+		
+		if (codePostal > 0){
+			messageString += String.valueOf(codePostal) + " ";			
+		}
+		
+		messageString += city;		
+		messageString += " est à " + String.valueOf(calculateSchoolDistance()) + "Km de l'école";
 
+		return messageString;
+	}
+
+	@Override
+	public String toString() {
+		return adressDisplayInformations();
+	}
 }
