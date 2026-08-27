@@ -37,9 +37,9 @@ public class Director extends Users {
 
     public void modifyCours(Courses cours, String nouveauNom, LocalDate nouvelleDateDebut,
                             LocalDate nouvelleDateFin, Teacher nouveauTeacher, String dateType) {
-    	cours.updateTeacher(cours, nouveauTeacher);
-    	cours.updateLocaldate(cours, nouvelleDateFin, dateType);
-    	cours.updateNameCourses(cours, nouveauNom);
+    	Courses.updateTeacher(cours, nouveauTeacher);
+    	Courses.updateLocalDate(cours, nouvelleDateFin, dateType);
+    	Courses.updateNameCourse(cours, nouveauNom);
     }
 
     public void deleteCours(ArrayList<Courses> courses, Courses cours) {
