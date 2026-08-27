@@ -61,6 +61,7 @@ public class Courses {
     }
 
     public void updateTeacher(Courses cours, Teacher teacherCourses){
+        Objects.requireNonNull(teacherCourses, "l'enseignant ne peut pas être nul");
         if(listCourse.contains(cours)){
             Courses courses = listCourse.get(listCourse.indexOf(cours));
             if(!courses.teacherCourses.equals(teacherCourses))courses.teacherCourses = teacherCourses;
@@ -71,6 +72,7 @@ public class Courses {
     }
 
     public void updateNameCourses(Courses cours, String nameCourse){
+        Objects.requireNonNull(nameCourse, "le nom du cours ne peut pas être nul")
         if(listCourse.contains(cours)){
             Courses courses = listCourse.get(listCourse.indexOf(cours));
             if(!courses.nameCourse.equals(nameCourse))courses.nameCourse = nameCourse;
@@ -81,6 +83,8 @@ public class Courses {
     }
 
     public void updateLocaldate(Courses cours, LocalDate date, String typedate){
+        Objects.requireNonNull(date, "la date  ne peut pas être nulle");
+        Objects.requireNonNull(typedate, "typedate ne peut pas nulle");
         if(listCourse.contains(cours) && (typedate.equals("debut") || typedate.equals("fin"))){
             Courses courses = listCourse.get(listCourse.indexOf(cours));
             if(typedate.equals("debut" ) && courses.dateEnd.isAfter(date))courses.dateBegin = date;
