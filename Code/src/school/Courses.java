@@ -24,7 +24,7 @@ public class Courses {
     /** Registre global de l'ensemble des cours créés. sert juste à simuler une table de base de donnée */
     static ArrayList<Courses> listCourse = new ArrayList<>();
 
-    final ArrayList<Student> = new ArrayList<>();
+    final ArrayList<Student> students = new ArrayList<>();
 
     public Courses(String nameCourse, Teacher teacherCourses, LocalDate dateBegin, LocalDate dateEnd) {
         /**
@@ -86,18 +86,18 @@ public class Courses {
     }
 
     public String getNameCourse() {
-        return nameCourse;
+        return this.nameCourse;
     }
 
     public Teacher getTeacherCourses() {
-        return teacherCourses;
+        return this.teacherCourses;
     }
     
     public LocalDate getDateBegin() {
-        return dateBegin;
+        return this.dateBegin;
     }
     public LocalDate getDateEnd() {
-        return dateEnd;
+        return this.dateEnd;
     }
 
     public static void remove(Courses cours){
@@ -186,8 +186,8 @@ public class Courses {
 
     @Override
     public String toString() {
-        return "Le cours " + nameCourse + " est enseigné par " + teacherCourses.getName() + " " + teacherCourses.getSurname() + 
-        ". Il commence du " + dateBegin + " jusqu'au " + dateEnd + ".";
+        return "Le cours " + this.nameCourse + " est enseigné par " + teacherCourses.getName() + " " + teacherCourses.getSurname() + 
+        ". Il commence du " + this.dateBegin + " jusqu'au " + this.dateEnd + ".";
     }
 
     public static void allcoursesTeacher(Teacher teacher){
