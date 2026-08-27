@@ -118,7 +118,7 @@ public class Adresse {
 		}
 		
 		messageString += city;		
-		messageString += " est à " + String.valueOf(calculateSchoolDistance()) + " Km de l'école";
+		messageString += " est à " + calculateSchoolDistance() + " Km de l'école";
 
 		return messageString;
 	}
