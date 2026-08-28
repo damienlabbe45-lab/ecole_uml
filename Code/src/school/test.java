@@ -303,24 +303,28 @@ public class test {
         System.out.println("==============================");
 
         anais.show_courses(listeCours);
+        System.out.println(anais.getAdresse().toString());
 
         System.out.println("\n==============================");
         System.out.println("COURS DE VICTOR");
         System.out.println("==============================");
 
         victor.show_courses(listeCours);
+        System.out.println(victor.getAdresse().toString());
 
         System.out.println("\n==============================");
         System.out.println("COURS DE LÉA");
         System.out.println("==============================");
 
         lea.show_courses(listeCours);
+        System.out.println(lea.getAdresse().toString());
 
         System.out.println("\n==============================");
         System.out.println("COURS DE HUGO");
         System.out.println("==============================");
 
         hugo.show_courses(listeCours);
+        System.out.println(hugo.getAdresse().toString());
 
         
         /*

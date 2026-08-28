@@ -24,6 +24,14 @@ public class Student extends Users {
 		this.adresse = adresse;
 	}
 
+	public Adresse getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
+
 	/**
 	 * Affiche les cours auxquels cet élève est inscrit.
 	 * La méthode parcourt tous les cours, puis recherche l'élève dans la liste
