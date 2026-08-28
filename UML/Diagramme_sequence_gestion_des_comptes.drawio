@@ -1,0 +1,365 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="40lxYIe_RgPx6X5lhgLG">
+    <mxGraphModel dx="1965" dy="1095" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\ntitle Diagramme général de séquence - Gestion des comptes utilisateurs\n\nautonumber\n\nactor \&quot;Utilisateur autorisé\&quot; as ADMIN\nparticipant \&quot;Système de gestion\\ndes comptes utilisateurs\&quot; as SYS\n\nADMIN -&gt; SYS: Accède à la gestion des comptes utilisateurs\n\nalt Création d&#39;un compte utilisateur\n    ADMIN -&gt; SYS: Demande la création d&#39;un compte\n    SYS -&gt; SYS: Crée le compte utilisateur\n    SYS --&gt; ADMIN: Confirme la création du compte\n\nelse Modification d&#39;un compte utilisateur\n    ADMIN -&gt; SYS: Sélectionne un compte utilisateur\n    ADMIN -&gt; SYS: Demande la modification du compte\n    SYS -&gt; SYS: Modifie les informations du compte\n    SYS --&gt; ADMIN: Confirme la modification du compte\n\nelse Suppression d&#39;un compte utilisateur\n    ADMIN -&gt; SYS: Sélectionne un compte utilisateur\n    ADMIN -&gt; SYS: Demande la suppression du compte\n    SYS -&gt; SYS: Supprime le compte utilisateur\n    SYS --&gt; ADMIN: Confirme la suppression du compte\n\nelse Désactivation d&#39;un compte utilisateur\n    ADMIN -&gt; SYS: Sélectionne un compte utilisateur\n    ADMIN -&gt; SYS: Demande la désactivation du compte\n    SYS -&gt; SYS: Désactive le compte utilisateur\n    SYS --&gt; ADMIN: Confirme la désactivation du compte\n\nelse Réactivation d&#39;un compte utilisateur\n    ADMIN -&gt; SYS: Sélectionne un compte utilisateur\n    ADMIN -&gt; SYS: Demande la réactivation du compte\n    SYS -&gt; SYS: Réactive le compte utilisateur\n    SYS --&gt; ADMIN: Confirme la réactivation du compte\n\nend\n\nnote right of SYS\n  Le directeur et l&#39;administrateur\n  disposent des mêmes droits\n  pour gérer les comptes utilisateurs.\nend note\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="EWY1tQrblkCqyEjua1ev-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="life_0" plantUmlBaseStyle="endArrow=none;html=1;strokeColor=#181818;strokeWidth=0.5;dashed=1;dashPattern=5 5;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-2">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=none;html=1;strokeColor=#181818;strokeWidth=0.5;dashed=1;dashPattern=5 5;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="94" y="126" as="sourcePoint" />
+              <mxPoint x="94" y="1067.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Système de gestion&#xa;des comptes utilisateurs" plantUmlId="p_1" plantUmlBaseStyle="shape=umlLifeline;perimeter=lifelinePerimeter;size=57;lifelineMirror=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#E2E2F0;strokeColor=#181818;strokeWidth=0.5;fontColor=#000000;fontSize=14;whiteSpace=wrap;html=1;" plantUmlBaseValue="Système de gestion&#xa;des comptes utilisateurs" id="EWY1tQrblkCqyEjua1ev-3">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="shape=umlLifeline;perimeter=lifelinePerimeter;size=57;lifelineMirror=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#E2E2F0;strokeColor=#181818;strokeWidth=0.5;fontColor=#000000;fontSize=14;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="1054.1" width="172.70000000000002" x="312.61428571428576" y="69" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="grpframe_2" plantUmlBaseStyle="rounded=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-4">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="rounded=0;fillColor=none;strokeColor=#000000;strokeWidth=1.5;" vertex="1">
+            <mxGeometry height="796.6999999999999" width="613.4285714285716" x="30" y="176" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="alt" plantUmlId="grptab_3" plantUmlBaseStyle="rounded=0;fillColor=#EEEEEE;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=13;fontStyle=1;align=left;spacingLeft=10;verticalAlign=middle;html=1;" plantUmlBaseValue="alt" id="EWY1tQrblkCqyEjua1ev-5">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="rounded=0;fillColor=#EEEEEE;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=13;fontStyle=1;align=left;spacingLeft=10;verticalAlign=middle;html=1;" vertex="1">
+            <mxGeometry height="19.7" width="56.24628571428572" x="30" y="176" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="[Création d&#39;un compte utilisateur]" plantUmlId="grpcond_4" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" plantUmlBaseValue="[Création d&#39;un compte utilisateur]" id="EWY1tQrblkCqyEjua1ev-6">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="15" width="187.47285714285715" x="96.24628571428572" y="179" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="grpelse_5" plantUmlBaseStyle="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.171;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-7">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.171;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="30" y="312.5" as="sourcePoint" />
+              <mxPoint x="643.4285714285716" y="312.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="[Modification d&#39;un compte utilisateur]" plantUmlId="grpelselbl_6" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" plantUmlBaseValue="[Modification d&#39;un compte utilisateur]" id="EWY1tQrblkCqyEjua1ev-8">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="15" width="211.14799999999997" x="35" y="314.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="grpelse_7" plantUmlBaseStyle="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.379;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-9">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.379;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="30" y="477.8" as="sourcePoint" />
+              <mxPoint x="643.4285714285716" y="477.8" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="[Suppression d&#39;un compte utilisateur]" plantUmlId="grpelselbl_8" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" plantUmlBaseValue="[Suppression d&#39;un compte utilisateur]" id="EWY1tQrblkCqyEjua1ev-10">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="15" width="210.38428571428565" x="35" y="479.8" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="grpelse_9" plantUmlBaseStyle="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.586;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-11">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.586;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="30" y="643.1" as="sourcePoint" />
+              <mxPoint x="643.4285714285716" y="643.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="[Désactivation d&#39;un compte utilisateur]" plantUmlId="grpelselbl_10" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" plantUmlBaseValue="[Désactivation d&#39;un compte utilisateur]" id="EWY1tQrblkCqyEjua1ev-12">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="15" width="217.51228571428572" x="35" y="645.1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="grpelse_11" plantUmlBaseStyle="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.794;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-13">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=2 2;exitX=0;exitY=0.794;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="30" y="808.4" as="sourcePoint" />
+              <mxPoint x="643.4285714285716" y="808.4" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="[Réactivation d&#39;un compte utilisateur]" plantUmlId="grpelselbl_12" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" plantUmlBaseValue="[Réactivation d&#39;un compte utilisateur]" id="EWY1tQrblkCqyEjua1ev-14">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=11;fontStyle=1;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="15" width="210.89342857142853" x="35" y="810.4" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;1&lt;/b&gt; Accède à la gestion des comptes utilisateurs" plantUmlId="msg_13" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;1&lt;/b&gt; Accède à la gestion des comptes utilisateurs" id="EWY1tQrblkCqyEjua1ev-15">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.036" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="161" />
+              </Array>
+              <mxPoint x="94" y="161" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="161" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;2&lt;/b&gt; Demande la création d&#39;un compte" plantUmlId="msg_14" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;2&lt;/b&gt; Demande la création d&#39;un compte" id="EWY1tQrblkCqyEjua1ev-16">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.267" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="219.5" />
+              </Array>
+              <mxPoint x="94" y="219.5" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="219.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="msg_15" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.173;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-17">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.173;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="436.9642857142858" y="251.5" />
+                <mxPoint x="436.9642857142858" y="271.5" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="251.5" as="sourcePoint" />
+              <mxPoint x="401.9642857142858" y="271.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;3&lt;/b&gt; Crée le compte utilisateur" plantUmlId="msglbl_18" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" plantUmlBaseValue="&lt;b&gt;3&lt;/b&gt; Crée le compte utilisateur" id="EWY1tQrblkCqyEjua1ev-18">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="18" width="168.96428571428575" x="405.9642857142858" y="231.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;4&lt;/b&gt; Confirme la création du compte" plantUmlId="msg_19" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;" plantUmlBaseValue="&lt;b&gt;4&lt;/b&gt; Confirme la création du compte" id="EWY1tQrblkCqyEjua1ev-19">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;">
+            <mxGeometry relative="1" x="0.247" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="303.5" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="303.5" as="sourcePoint" />
+              <mxPoint x="94" y="303.5" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;5&lt;/b&gt; Sélectionne un compte utilisateur" plantUmlId="msg_20" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;5&lt;/b&gt; Sélectionne un compte utilisateur" id="EWY1tQrblkCqyEjua1ev-20">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.264" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="352.8" />
+              </Array>
+              <mxPoint x="94" y="352.8" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="352.8" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;6&lt;/b&gt; Demande la modification du compte" plantUmlId="msg_21" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;6&lt;/b&gt; Demande la modification du compte" id="EWY1tQrblkCqyEjua1ev-21">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.219" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="384.8" />
+              </Array>
+              <mxPoint x="94" y="384.8" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="384.8" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="msg_22" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.33;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-22">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.33;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="436.9642857142858" y="416.8" />
+                <mxPoint x="436.9642857142858" y="436.8" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="416.8" as="sourcePoint" />
+              <mxPoint x="401.9642857142858" y="436.8" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;7&lt;/b&gt; Modifie les informations du compte" plantUmlId="msglbl_25" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" plantUmlBaseValue="&lt;b&gt;7&lt;/b&gt; Modifie les informations du compte" id="EWY1tQrblkCqyEjua1ev-23">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="18" width="227.46428571428578" x="405.9642857142858" y="396.8" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;8&lt;/b&gt; Confirme la modification du compte" plantUmlId="msg_26" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;" plantUmlBaseValue="&lt;b&gt;8&lt;/b&gt; Confirme la modification du compte" id="EWY1tQrblkCqyEjua1ev-24">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;">
+            <mxGeometry relative="1" x="0.162" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="468.8" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="468.8" as="sourcePoint" />
+              <mxPoint x="94" y="468.8" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;9&lt;/b&gt; Sélectionne un compte utilisateur" plantUmlId="msg_27" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;9&lt;/b&gt; Sélectionne un compte utilisateur" id="EWY1tQrblkCqyEjua1ev-25">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.264" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="518.1" />
+              </Array>
+              <mxPoint x="94" y="518.1" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="518.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;10&lt;/b&gt; Demande la suppression du compte" plantUmlId="msg_28" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;10&lt;/b&gt; Demande la suppression du compte" id="EWY1tQrblkCqyEjua1ev-26">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.198" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="550.1" />
+              </Array>
+              <mxPoint x="94" y="550.1" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="550.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="msg_29" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.487;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-27">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.487;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="436.9642857142858" y="582.1" />
+                <mxPoint x="436.9642857142858" y="602.1" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="582.1" as="sourcePoint" />
+              <mxPoint x="401.9642857142858" y="602.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;11&lt;/b&gt; Supprime le compte utilisateur" plantUmlId="msglbl_32" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" plantUmlBaseValue="&lt;b&gt;11&lt;/b&gt; Supprime le compte utilisateur" id="EWY1tQrblkCqyEjua1ev-28">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="18" width="205.45714285714286" x="405.9642857142858" y="562.1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;12&lt;/b&gt; Confirme la suppression du compte" plantUmlId="msg_33" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;" plantUmlBaseValue="&lt;b&gt;12&lt;/b&gt; Confirme la suppression du compte" id="EWY1tQrblkCqyEjua1ev-29">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;">
+            <mxGeometry relative="1" x="0.141" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="634.1" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="634.1" as="sourcePoint" />
+              <mxPoint x="94" y="634.1" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;13&lt;/b&gt; Sélectionne un compte utilisateur" plantUmlId="msg_34" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;13&lt;/b&gt; Sélectionne un compte utilisateur" id="EWY1tQrblkCqyEjua1ev-30">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.241" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="683.4" />
+              </Array>
+              <mxPoint x="94" y="683.4" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="683.4" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;14&lt;/b&gt; Demande la désactivation du compte" plantUmlId="msg_35" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;14&lt;/b&gt; Demande la désactivation du compte" id="EWY1tQrblkCqyEjua1ev-31">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.172" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="715.4" />
+              </Array>
+              <mxPoint x="94" y="715.4" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="715.4" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="msg_36" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.644;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-32">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.644;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="436.9642857142858" y="747.4" />
+                <mxPoint x="436.9642857142858" y="767.4" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="747.4" as="sourcePoint" />
+              <mxPoint x="401.9642857142858" y="767.4" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;15&lt;/b&gt; Désactive le compte utilisateur" plantUmlId="msglbl_39" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" plantUmlBaseValue="&lt;b&gt;15&lt;/b&gt; Désactive le compte utilisateur" id="EWY1tQrblkCqyEjua1ev-33">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="18" width="209.0785714285714" x="405.9642857142858" y="727.4" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;16&lt;/b&gt; Confirme la désactivation du compte" plantUmlId="msg_40" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;" plantUmlBaseValue="&lt;b&gt;16&lt;/b&gt; Confirme la désactivation du compte" id="EWY1tQrblkCqyEjua1ev-34">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;">
+            <mxGeometry relative="1" x="0.116" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="799.4" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="799.4" as="sourcePoint" />
+              <mxPoint x="94" y="799.4" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;17&lt;/b&gt; Sélectionne un compte utilisateur" plantUmlId="msg_41" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;17&lt;/b&gt; Sélectionne un compte utilisateur" id="EWY1tQrblkCqyEjua1ev-35">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.241" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="848.6999999999999" />
+              </Array>
+              <mxPoint x="94" y="848.6999999999999" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="848.6999999999999" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;18&lt;/b&gt; Demande la réactivation du compte" plantUmlId="msg_42" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" plantUmlBaseValue="&lt;b&gt;18&lt;/b&gt; Demande la réactivation du compte" id="EWY1tQrblkCqyEjua1ev-36">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;" target="EWY1tQrblkCqyEjua1ev-3">
+            <mxGeometry relative="1" x="-0.207" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="880.6999999999999" />
+              </Array>
+              <mxPoint x="94" y="880.6999999999999" as="sourcePoint" />
+              <mxPoint x="398.9642857142858" y="880.6999999999999" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="msg_43" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.8;exitDx=0;exitDy=0;" plantUmlBaseValue="" id="EWY1tQrblkCqyEjua1ev-37">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;strokeColor=#181818;strokeWidth=1;exitX=0.5;exitY=0.8;exitDx=0;exitDy=0;rounded=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="436.9642857142858" y="912.6999999999999" />
+                <mxPoint x="436.9642857142858" y="932.6999999999999" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="912.6999999999999" as="sourcePoint" />
+              <mxPoint x="401.9642857142858" y="932.6999999999999" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;19&lt;/b&gt; Réactive le compte utilisateur" plantUmlId="msglbl_46" plantUmlBaseStyle="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" plantUmlBaseValue="&lt;b&gt;19&lt;/b&gt; Réactive le compte utilisateur" id="EWY1tQrblkCqyEjua1ev-38">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fontColor=#000000;fontSize=13;align=left;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="18" width="201.83571428571426" x="405.9642857142858" y="892.6999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;20&lt;/b&gt; Confirme la réactivation du compte" plantUmlId="msg_47" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;" plantUmlBaseValue="&lt;b&gt;20&lt;/b&gt; Confirme la réactivation du compte" id="EWY1tQrblkCqyEjua1ev-39">
+          <mxCell edge="1" parent="EWY1tQrblkCqyEjua1ev-1" source="EWY1tQrblkCqyEjua1ev-3" style="endArrow=classic;endFill=1;endSize=9;html=1;rounded=0;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;strokeColor=#181818;strokeWidth=1;fontColor=#000000;fontSize=13;verticalAlign=bottom;labelBackgroundColor=none;dashed=1;dashPattern=2 2;">
+            <mxGeometry relative="1" x="0.15" as="geometry">
+              <Array as="points">
+                <mxPoint x="246" y="964.6999999999999" />
+              </Array>
+              <mxPoint x="398.9642857142858" y="964.6999999999999" as="sourcePoint" />
+              <mxPoint x="94" y="964.6999999999999" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="  Le directeur et l&#39;administrateur&#xa;  disposent des mêmes droits&#xa;  pour gérer les comptes utilisateurs." plantUmlId="note_48" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontColor=#000000;fontSize=13;align=left;spacingLeft=4;spacing=2;verticalAlign=middle;whiteSpace=wrap;html=1;" plantUmlBaseValue="  Le directeur et l&#39;administrateur&#xa;  disposent des mêmes droits&#xa;  pour gérer les comptes utilisateurs." id="EWY1tQrblkCqyEjua1ev-40">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;strokeWidth=0.5;fontColor=#000000;fontSize=13;align=left;spacingLeft=4;spacing=2;verticalAlign=middle;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="62.39999999999999" width="239.67857142857144" x="403.9642857142858" y="984.6999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Utilisateur autorisé" plantUmlId="p_49" plantUmlBaseStyle="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#E2E2F0;strokeColor=#181818;fontColor=#000000;fontSize=14;html=1;" plantUmlBaseValue="Utilisateur autorisé" id="EWY1tQrblkCqyEjua1ev-41">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#E2E2F0;strokeColor=#181818;fontColor=#000000;fontSize=14;html=1;" vertex="1">
+            <mxGeometry height="38" width="24" x="82" y="69" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Utilisateur autorisé" plantUmlId="pf_50" plantUmlBaseStyle="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;fillColor=#E2E2F0;strokeColor=#181818;fontColor=#000000;fontSize=14;html=1;" plantUmlBaseValue="Utilisateur autorisé" id="EWY1tQrblkCqyEjua1ev-42">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;fillColor=#E2E2F0;strokeColor=#181818;fontColor=#000000;fontSize=14;html=1;" vertex="1">
+            <mxGeometry height="38" width="24" x="82" y="1085.1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Diagramme général de séquence - Gestion des comptes utilisateurs" plantUmlId="title_51" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" plantUmlBaseValue="Diagramme général de séquence - Gestion des comptes utilisateurs" id="EWY1tQrblkCqyEjua1ev-43">
+          <mxCell parent="EWY1tQrblkCqyEjua1ev-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="24" width="480.12400000000025" x="114.65228571428565" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
