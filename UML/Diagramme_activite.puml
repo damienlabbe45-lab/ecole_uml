@@ -1,0 +1,100 @@
+@startuml
+start
+
+if (Etre sur l'application ?) then (oui)
+  :essais = 0;
+
+  repeat
+    :Saisir login et
+    mot de passe
+    de connexion;
+    :Vérifier
+    l'authentification;
+    
+    if (Identifiants corrects ?) then (Oui)
+      break
+    else (Non)
+      :essais = essais + 1;
+      :Afficher
+      message d'erreur;
+    endif
+  repeat while (essais < 3) is (Oui) not (Non)
+
+  if (essais >= 3) then (Oui)
+    :Afficher
+    "Compte temporairement bloqué";
+    :Notifier
+    à l'administrateur;
+    :Enregistrer
+    la tentative dans le journal;
+  else (Non)
+    :Authentification
+    réussie;
+
+    repeat
+      switch (Rôle de l'utilisateur ?)
+      case ( Élève )
+        :Afficher
+        les cours;
+      case ( Professeur )
+        switch (Quelle action effectuer ?)
+        case ( Action 1 )
+          :Afficher
+          les cours;
+        case ( Action 2 )
+          :Afficher
+          les élèves;
+        case ( Action 3 )
+          :Donner
+           cours;
+        case ( Action 4 )
+          :Afficher 
+          répartition
+          géographique
+          des élèves;
+        endswitch
+      case ( Directeur )
+        switch (Quelle action effectuer ?)
+        case ( Action 1 )
+          :Afficher
+          les cours;
+        case ( Action 2 )
+          :Afficher
+          les élèves;
+        case ( Action 3 )
+          :Donner
+          cours;
+        case ( Action 4 )
+          :Gestion
+          des cours;
+        case ( Action 5 )
+          :Gestio
+           des comptes;
+        case ( Action 6 )
+          :Afficher
+          répartition
+          géographique
+          des élèves;
+        endswitch
+      case ( Administrateur )
+        switch (Quelle action effectuer ?)
+        case ( Action 1 )
+          :Créer
+          compte directeur;
+        case ( Action 2 )
+          :Gestion
+          des comptes;
+        endswitch
+      endswitch
+    repeat while (Souhaitez vous 
+    effectuer
+    une autre action ?) is (Oui)
+
+    :Se déconnecter;
+  endif
+
+else (Non)
+endif
+
+stop
+@enduml
